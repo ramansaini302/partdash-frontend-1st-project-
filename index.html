@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="heading-box">
+    <p style="display: flex; justify-content: space-between; width: 100%;"><span><img src="logo.jpeg" alt="partdash logo" style="width: 300px; height: 150px;"></span><span><button id="view-cart=btn" onclick="openCart()">🛒 </button></span>
+    <p style="display: flex; justify-content: space-between; width: 100%;"><span>FREE delivery above ₹999 </span><span>PartDash@Offical</span></p></header>
+    <br>
+    <h1><img src="img.png" alt="PartDash" style="width: 100%; height: max-content;"></h1>
+
+    <strong><h2>   HOT DEAL🔥</h2></strong>
+<section id="offers">
+<div class="offer-card">
+    <img src="" alt="Engine Oil + Air Filter">
+    <h5>Engine Oil + Air Filter</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹999</del>
+    <div class="price">₹799 Only</div>
+    <button onclick="addtocart('Engine Oil + Air Filter',799)">
+        Add to Cart
+    </button>
+</div>
+<div class="offer-card">
+    <img src="" alt="Engine Oil + Oil Filter">
+    <h5>Engine Oil + Oil Filter</h5>
+    <p>Hyundai i20 / Grand i10</p>
+    <del>₹899</del>
+    <div class="price">₹699 Only</div>
+    <button onclick="addtocart('Engine Oil + Oil Filter',699)">
+        Add to Cart
+    </button>
+</div>
+<div class="offer-card">
+    <img src="" alt="Engine Oil + Oil Filter + Air Filter">
+    <h5>Engine Oil + 2 Filters</h5>
+    <p>Maruti WagonR / Alto K10</p>
+    <del>₹1,499</del>
+    <div class="price">₹1,199 Only</div>
+    <button onclick="addtocart('Engine Oil + Oil Filter + Air Filter',1199)">
+        Add to Cart
+    </button>
+</div>
+<div class="offer-card">
+    <img src="" alt="Engine Oil + Wiper">
+    <h5>Engine Oil + Wiper</h5>
+    <p>Selected Maruti Cars</p>
+    <del>₹799</del>
+    <div class="price">₹649 Only</div>
+    <button onclick="addtocart('Engine Oil + Wiper',649)">
+        Add to Cart
+    </button>
+</div></section>
+    
+    <br><br>
+    <h2><strong>Shop by Category</strong></h2>
+    <div><h4>
+        <button type="button" onclick="showCategory('side mirrors')"><i class="fa-solid fa-car-side"></i><br>Side Mirror</button>
+        <button type="button" onclick="showCategory('break pads')"><i class="fa-solid fa-circle-dot brake-icon"></i><br>Break Pad</button>
+        <button type="button" onclick="showCategory('oils & fluids')"><i class="fa-solid fa-gas-pump"></i><br>Oils & Fluids</button>
+        <button type="button" onclick="showCategory('battery')"><i class="fa-solid fa-battery-full"></i><br>Battery</button>
+        <button type="button" onclick="showCategory('lights')"><i class="fa-solid fa-lightbulb"></i><br>Lights</button>
+        <button type="button" onclick="showCategory('door locks')"><i class="fa-solid fa-lock"></i><br>Door Locks</button>
+        <button type="button" onclick="showCategory('wipers')"><i class="fa-solid fa-wind"></i><br>Wipers</button>
+        <button type="button" onclick="showCategory('filters')"><i class="fa-solid fa-filter"></i><br>Filters</button></h4>
+    </div>
+
+    <!-- ================= PRODUCT CARDS ================= -->
+
+<!-- MARUTI SUZUKI -->
+<section id="products">
+<div class="product-card" data-category="oils & fluids">
+    <img src="" alt="img">
+    <h5>Engine Oil 1L</h5>
+    <p>Maruti Swift, WagonR, Alto K10</p>
+    <del>₹599</del>
+    <div class="price">₹499 Only</div>
+    <button onclick="addtocart('Engine Oil 1L - Swift/WagonR/Alto K10',499)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹399</del>
+    <div class="price">₹299 Only</div>
+    <button onclick="addtocart('Air Filter - Swift/Dzire',299)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Oil Filter</h5>
+    <p>Maruti Swift / Baleno / Dzire</p>
+    <del>₹399</del>
+    <div class="price">₹299 Only</div>
+    <button onclick="addtocart('Oil Filter - Swift/Baleno/Dzire',299)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Maruti Swift</p>
+    <del>₹899</del>
+    <div class="price">₹699 Only</div>
+    <button onclick="addtocart('Front Brake Pad - Swift',699)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Pair</h5>
+    <p>Maruti Swift / Baleno</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Wiper Pair - Swift/Baleno',399)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="battery">
+    <img src="" alt="img">
+    <h5>Car Battery 45Ah</h5>
+    <p>Maruti Alto / WagonR / Celerio</p>
+    <del>₹6,000</del>
+    <div class="price">₹5,499 Only</div>
+    <button onclick="addtocart('45Ah Battery - Alto/WagonR/Celerio',5499)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- HYUNDAI -->
+
+<div class="product-card" data-category="oils & fluids">
+    <img src="" alt="img">
+    <h5>Engine Oil 4L</h5>
+    <p>Hyundai i20 / Venue / Creta</p>
+    <del>₹2,199</del>
+    <div class="price">₹1,899 Only</div>
+    <button onclick="addtocart('Engine Oil 4L - i20/Venue/Creta',1899)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Hyundai i20</p>
+    <del>₹399</del>
+    <div class="price">₹329 Only</div>
+    <button onclick="addtocart('Air Filter - Hyundai i20',329)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Cabin AC Filter</h5>
+    <p>Hyundai Creta / Venue</p>
+    <del>₹599</del>
+    <div class="price">₹449 Only</div>
+    <button onclick="addtocart('Cabin Filter - Creta/Venue',449)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Hyundai i20</p>
+    <del>₹999</del>
+    <div class="price">₹799 Only</div>
+    <button onclick="addtocart('Front Brake Pad - Hyundai i20',799)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Pair</h5>
+    <p>Hyundai Creta</p>
+    <del>₹599</del>
+    <div class="price">₹449 Only</div>
+    <button onclick="addtocart('Wiper Pair - Hyundai Creta',449)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- TATA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Tata Nexon / Punch / Altroz</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Air Filter - Nexon/Punch/Altroz',399)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Oil Filter</h5>
+    <p>Tata Nexon / Altroz</p>
+    <del>₹499</del>
+    <div class="price">₹349 Only</div>
+    <button onclick="addtocart('Oil Filter - Nexon/Altroz',349)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Tata Nexon</p>
+    <del>₹1,099</del>
+    <div class="price">₹899 Only</div>
+    <button onclick="addtocart('Front Brake Pad - Tata Nexon',899)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Pair</h5>
+    <p>Tata Punch / Nexon</p>
+    <del>₹599</del>
+    <div class="price">₹449 Only</div>
+    <button onclick="addtocart('Wiper Pair - Punch/Nexon',449)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- MAHINDRA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Mahindra Scorpio / Bolero</p>
+    <del>₹599</del>
+    <div class="price">₹449 Only</div>
+    <button onclick="addtocart('Air Filter - Scorpio/Bolero',449)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Mahindra XUV700</p>
+    <del>₹1,499</del>
+    <div class="price">₹1,199 Only</div>
+    <button onclick="addtocart('Front Brake Pad - XUV700',1199)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Pair</h5>
+    <p>Mahindra Thar</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Wiper Pair - Mahindra Thar',549)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- TOYOTA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Toyota Innova Crysta</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Air Filter - Innova Crysta',549)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Toyota Fortuner</p>
+    <del>₹2,499</del>
+    <div class="price">₹1,999 Only</div>
+    <button onclick="addtocart('Front Brake Pad - Fortuner',1999)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- KIA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Kia Seltos / Sonet</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Air Filter - Seltos/Sonet',399)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Pair</h5>
+    <p>Kia Seltos</p>
+    <del>₹599</del>
+    <div class="price">₹449 Only</div>
+    <button onclick="addtocart('Wiper Pair - Kia Seltos',449)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- HONDA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Honda City / Amaze</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Air Filter - City/Amaze',399)">
+        Add to Cart
+    </button>
+</div>
+
+<div class="product-card" data-category="break pads">
+    <img src="" alt="img">
+    <h5>Front Brake Pad Set</h5>
+    <p>Honda City</p>
+    <del>₹1,099</del>
+    <div class="price">₹899 Only</div>
+    <button onclick="addtocart('Front Brake Pad - Honda City',899)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- MG -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>MG Astor / Hector</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Air Filter - MG Astor/Hector',549)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- VOLKSWAGEN -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Volkswagen Virtus / Taigun</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Air Filter - Virtus/Taigun',549)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- SKODA -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Skoda Slavia / Kushaq</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Air Filter - Slavia/Kushaq',549)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- RENAULT -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Renault Kwid / Triber / Kiger</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Air Filter - Kwid/Triber/Kiger',399)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- NISSAN -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Nissan Magnite</p>
+    <del>₹499</del>
+    <div class="price">₹399 Only</div>
+    <button onclick="addtocart('Air Filter - Nissan Magnite',399)">
+        Add to Cart
+    </button>
+</div>
+
+
+<!-- JEEP -->
+
+<div class="product-card" data-category="filters">
+    <img src="" alt="img">
+    <h5>Air Filter</h5>
+    <p>Jeep Compass</p>
+    <del>₹899</del>
+    <div class="price">₹699 Only</div>
+    <button onclick="addtocart('Air Filter - Jeep Compass',699)">
+        Add to Cart
+    </button>
+</div>
+<!-- WIPER PRODUCTS -->
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Arm - Front</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹699</del>
+    <div class="price">₹549 Only</div>
+    <button onclick="addtocart('Front Wiper Arm - Swift/Dzire',549)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">  
+    <h5>Rear Wiper Blade</h5>
+    <p>Maruti Baleno / Brezza</p>
+    <del>₹499</del>
+    <div class="price">₹349 Only</div>
+    <button onclick="addtocart('Rear Wiper Blade - Baleno/Brezza',349)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Refill Rubber</h5>
+    <p>Universal</p>
+    <del>₹249</del>
+    <div class="price">₹149 Only</div>
+    <button onclick="addtocart('Universal Wiper Refill Rubber',149)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Linkage</h5>
+    <p>Maruti WagonR / Alto</p>
+    <del>₹1,299</del>
+    <div class="price">₹999 Only</div>
+    <button onclick="addtocart('Wiper Linkage - WagonR/Alto',999)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Windshield Washer Nozzle</h5>
+    <p>Hyundai i20 / Grand i10</p>
+    <del>₹399</del>
+    <div class="price">₹249 Only</div>
+    <button onclick="addtocart('Washer Nozzle - i20/Grand i10',249)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="wipers">
+    <img src="" alt="img">
+    <h5>Wiper Washer Pump</h5>
+    <p>Maruti Swift / Baleno</p>
+    <del>₹799</del>
+    <div class="price">₹599 Only</div>
+    <button onclick="addtocart('Wiper Washer Pump - Swift/Baleno',599)">Add to Cart</button>
+</div>
+<!-- LIGHT PRODUCTS -->
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Fog Lamp Assembly</h5>
+    <p>Maruti WagonR</p>
+    <del>₹499</del>
+    <div class="price">₹395 Only</div>
+    <button onclick="addtocart('Fog Lamp Assembly - WagonR',395)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Fog Lamp Pair</h5>
+    <p>Hyundai Creta / Venue</p>
+    <del>₹1,799</del>
+    <div class="price">₹1,399 Only</div>
+    <button onclick="addtocart('Fog Lamp Pair - Creta/Venue',1399)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Tail Light Assembly</h5>
+    <p>Maruti WagonR</p>
+    <del>₹1,399</del>
+    <div class="price">₹1,168 Only</div>
+    <button onclick="addtocart('Tail Light Assembly - WagonR',1168)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Headlight Assembly</h5>
+    <p>Maruti WagonR</p>
+    <del>₹3,499</del>
+    <div class="price">₹2,944 Only</div>
+    <button onclick="addtocart('Headlight Assembly - WagonR',2944)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Brake Light Bulb</h5>
+    <p>Maruti / Hyundai / Tata</p>
+    <del>₹199</del>
+    <div class="price">₹149 Only</div>
+    <button onclick="addtocart('Brake Light Bulb',149)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Indicator Bulb Pair</h5>
+    <p>Universal</p>
+    <del>₹299</del>
+    <div class="price">₹199 Only</div>
+    <button onclick="addtocart('Universal Indicator Bulb Pair',199)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Number Plate LED Pair</h5>
+    <p>Universal</p>
+    <del>₹299</del>
+    <div class="price">₹199 Only</div>
+    <button onclick="addtocart('Number Plate LED Pair',199)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="lights">
+    <img src="" alt="img">
+    <h5>Cabin/Dome Light</h5>
+    <p>Universal</p>
+    <del>₹399</del>
+    <div class="price">₹249 Only</div>
+    <button onclick="addtocart('Universal Cabin Dome Light',249)">Add to Cart</button>
+</div>
+<!-- DOOR LOCK PRODUCTS -->
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Door Lock Actuator</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹899</del>
+    <div class="price">₹699 Only</div>
+    <button onclick="addtocart('Door Lock Actuator - Swift/Dzire',699)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Front Door Lock</h5>
+    <p>Hyundai i20</p>
+    <del>₹999</del>
+    <div class="price">₹799 Only</div>
+    <button onclick="addtocart('Front Door Lock - Hyundai i20',799)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Rear Door Lock</h5>
+    <p>Maruti WagonR</p>
+    <del>₹899</del>
+    <div class="price">₹699 Only</div>
+    <button onclick="addtocart('Rear Door Lock - WagonR',699)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Boot Lock</h5>
+    <p>Maruti Baleno / Swift</p>
+    <del>₹799</del>
+    <div class="price">₹599 Only</div>
+    <button onclick="addtocart('Boot Lock - Baleno/Swift',599)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Door Handle - Outer</h5>
+    <p>Maruti WagonR</p>
+    <del>₹399</del>
+    <div class="price">₹299 Only</div>
+    <button onclick="addtocart('Outer Door Handle - WagonR',299)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Door Handle - Inner</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹499</del>
+    <div class="price">₹349 Only</div>
+    <button onclick="addtocart('Inner Door Handle - Swift/Dzire',349)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Door Lock Knob Set</h5>
+    <p>Universal</p>
+    <del>₹299</del>
+    <div class="price">₹199 Only</div>
+    <button onclick="addtocart('Universal Door Lock Knob Set',199)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="door locks">
+    <img src="" alt="img">
+    <h5>Door Striker Plate</h5>
+    <p>Universal / Model Specific</p>
+    <del>₹399</del>
+    <div class="price">₹249 Only</div>
+    <button onclick="addtocart('Door Striker Plate',249)">Add to Cart</button>
+</div>
+<!-- SIDE MIRROR PRODUCTS -->
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Side Mirror Glass</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹399</del>
+    <div class="price">₹299 Only</div>
+    <button onclick="addtocart('Side Mirror Glass - Swift/Dzire',299)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Side Mirror Glass</h5>
+    <p>Hyundai i10 / Grand i10</p>
+    <del>₹399</del>
+    <div class="price">₹290 Only</div>
+    <button onclick="addtocart('Side Mirror Glass - i10/Grand i10',290)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Manual Side Mirror</h5>
+    <p>Maruti WagonR</p>
+    <del>₹699</del>
+    <div class="price">₹555 Only</div>
+    <button onclick="addtocart('Manual Side Mirror - WagonR',555)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Electric Side Mirror</h5>
+    <p>Maruti Swift / Baleno</p>
+    <del>₹1,799</del>
+    <div class="price">₹1,399 Only</div>
+    <button onclick="addtocart('Electric Side Mirror - Swift/Baleno',1399)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Side Mirror Cover</h5>
+    <p>Maruti Swift / Baleno</p>
+    <del>₹699</del>
+    <div class="price">₹499 Only</div>
+    <button onclick="addtocart('Side Mirror Cover - Swift/Baleno',499)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Side Mirror Indicator</h5>
+    <p>Hyundai Creta / Venue</p>
+    <del>₹699</del>
+    <div class="price">₹499 Only</div>
+    <button onclick="addtocart('Side Mirror Indicator - Creta/Venue',499)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Blind Spot Mirror Pair</h5>
+    <p>Universal</p>
+    <del>₹299</del>
+    <div class="price">₹199 Only</div>
+    <button onclick="addtocart('Universal Blind Spot Mirror Pair',199)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="side mirrors">
+    <img src="" alt="img">
+    <h5>Side Mirror Mounting Base</h5>
+    <p>Maruti Swift / Dzire</p>
+    <del>₹699</del>
+    <div class="price">₹499 Only</div>
+    <button onclick="addtocart('Side Mirror Mounting Base - Swift/Dzire',499)">Add to Cart</button>
+</div></section>
+        
+    <section id="cart-section">
+    <h2>🛒 Your Cart</h2>
+
+    <div id="cart-items"></div>
+    <p id="delivery-charge">Dilevery:₹30</p>
+    <h3 id="cart-total">Total: ₹0 </h3>
+    <button id ="order-button" onclick="document.getElementById('checkout-section').style.display='block'">Place Order</button>
+</section>
+<section id="checkout-section" style="display: none;">
+    <h2>📦 Delivery Details</h2>
+
+    <input type="text" id="customer-name" placeholder="Your Name">
+
+    <input type="tel" id="customer-phone" placeholder="Phone Number">
+
+    <textarea id="customer-address" placeholder="Delivery Address"></textarea>
+
+    <h3>Payment Method</h3>
+    <p>💵 Cash on Delivery (COD)</p>
+
+    <button onclick="confirmOrder()">
+        Confirm Order
+    </button>
+</section>
+<h5>PartDash@2026</h5>
+<script src="script.js"></script> 
+</body>
+</html>
